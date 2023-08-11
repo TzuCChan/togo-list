@@ -1,0 +1,20 @@
+{
+  "name": "togo-list",
+  "version": "1.0.0",
+  "description": "Stage 14",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TzuCChan/togo-list.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TzuCChan/togo-list/issues"
+  },
+  "homepage": "https://github.com/TzuCChan/togo-list#readme"
+}
