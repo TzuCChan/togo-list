@@ -19,5 +19,8 @@
   "homepage": "https://github.com/TzuCChan/togo-list#readme",
   "devDependencies": {
     "typescript": "^5.1.6"
+  },
+  "dependencies": {
+    "uuid": "^9.0.0"
   }
 }
