@@ -2,6 +2,6 @@
 
 // console.log(uuidV4())
 
-const list = document.querySelector<HTMLUListElement>("list")
-const form = document.querySelector<HTMLFormElement>("new-place-form")
-const input = document.querySelector<HTMLInputElement>("new-place-title")
+const list = document.querySelector<HTMLUListElement>("#list")
+const form = document.getElementById("new-place-form") as HTMLFormElement | null
+const input = document.querySelector<HTMLInputElement>("#new-place-title")
