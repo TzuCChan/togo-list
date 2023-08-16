@@ -15,5 +15,4 @@ form?.addEventListener("submit", e => {
     completed: false,
     createdAt: new Date()
   }
-  input.value
 })
