@@ -19,6 +19,9 @@ form?.addEventListener("submit", e => {
   addListItem(newPlace)
 })
 
-function addListItem(place) {
-  
-}
+function addListItem(place: {
+  id: string,
+  title: string,
+  completed: boolean,
+  createdAt: Date,
+}) {}
