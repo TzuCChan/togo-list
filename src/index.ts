@@ -18,3 +18,7 @@ form?.addEventListener("submit", e => {
 
   addListItem(newPlace)
 })
+
+function addListItem(place) {
+  
+}
