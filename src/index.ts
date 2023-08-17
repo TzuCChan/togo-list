@@ -31,4 +31,7 @@ function addListItem(place: Place) {
   const label = document.createElement("label")
   const checkbox = document.createElement("input")
   checkbox.type = "checkbox"
+  label.append(checkbox, place.title)
+  item.append(label)
+  list?.append(item)
 }
