@@ -48,3 +48,9 @@ function addListItem(place: Place) {
 function savePlaces() {
   localStorage.setItem("PLACES", JSON.stringify(places))
 }
+
+function loadPlaces() {
+  const placeJSON = localStorage.getItem("PLACES")
+  if (placeJSON == null) return []
+  return JSON.parse(placeJSON)
+}
