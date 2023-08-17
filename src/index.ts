@@ -24,6 +24,7 @@ form?.addEventListener("submit", e => {
   }
 
   addListItem(newPlace)
+  input.value = ""
 })
 
 function addListItem(place: Place) {
@@ -31,8 +32,8 @@ function addListItem(place: Place) {
   const label = document.createElement("label")
   const checkbox = document.createElement("input")
   checkbox.type = "checkbox"
+  checkbox.checked = place.completed
   label.append(checkbox, place.title)
   item.append(label)
   list?.append(item)
-  return true
 }
