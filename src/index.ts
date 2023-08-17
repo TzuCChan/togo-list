@@ -49,7 +49,7 @@ function savePlaces() {
   localStorage.setItem("PLACES", JSON.stringify(places))
 }
 
-function loadPlaces() {
+function loadPlaces(): Place[] {
   const placeJSON = localStorage.getItem("PLACES")
   if (placeJSON == null) return []
   return JSON.parse(placeJSON)
