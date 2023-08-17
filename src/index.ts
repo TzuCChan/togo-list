@@ -16,7 +16,7 @@ form?.addEventListener("submit", e => {
 
   if (input?.value == "" || input?.value == null) return
 
-  const newPlace = {
+  const newPlace: Place = {
     id: uuidV4(),
     title: input.value,
     completed: false,
