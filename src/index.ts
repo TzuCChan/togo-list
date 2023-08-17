@@ -24,6 +24,7 @@ form?.addEventListener("submit", e => {
     createdAt: new Date()
   }
   places.push(newPlace)
+  savePlaces()
 
   addListItem(newPlace)
   input.value = ""
@@ -42,4 +43,8 @@ function addListItem(place: Place) {
   label.append(checkbox, place.title)
   item.append(label)
   list?.append(item)
+}
+
+function savePlaces() {
+  localStorage.setItem("PLACES", JSON.stringify(places))
 }
