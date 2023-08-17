@@ -33,6 +33,9 @@ function addListItem(place: Place) {
   const item = document.createElement("li")
   const label = document.createElement("label")
   const checkbox = document.createElement("input")
+  checkbox.addEventListener("change", () => {
+    place.completed = checkbox.checked
+  })
   checkbox.type = "checkbox"
   checkbox.checked = place.completed
   label.append(checkbox, place.title)
