@@ -10,7 +10,8 @@ type Place = {
 const list = document.querySelector<HTMLUListElement>("#list")
 const form = document.getElementById("new-place-form") as HTMLFormElement | null
 const input = document.querySelector<HTMLInputElement>("#new-place-title")
-const places: Place[] = []
+const places: Place[] = loadPlaces()
+places.forEach(addListItem)
 
 form?.addEventListener("submit", e => {
   e.preventDefault()
