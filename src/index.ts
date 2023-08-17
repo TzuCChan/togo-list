@@ -10,6 +10,7 @@ type Place = {
 const list = document.querySelector<HTMLUListElement>("#list")
 const form = document.getElementById("new-place-form") as HTMLFormElement | null
 const input = document.querySelector<HTMLInputElement>("#new-place-title")
+const places: Place[] = []
 
 form?.addEventListener("submit", e => {
   e.preventDefault()
@@ -22,6 +23,7 @@ form?.addEventListener("submit", e => {
     completed: false,
     createdAt: new Date()
   }
+  places.push(newPlace)
 
   addListItem(newPlace)
   input.value = ""
