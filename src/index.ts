@@ -9,10 +9,12 @@ form?.addEventListener("submit", e => {
 
   if (input?.value == "" || input?.value == null) return
 
-  const place = {
+  const newPlace = {
     id: uuidV4(),
     title: input.value,
     completed: false,
     createdAt: new Date()
   }
+
+  addListItem(newPlace)
 })
