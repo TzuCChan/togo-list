@@ -1,5 +1,12 @@
 import { v4 as uuidV4 } from "uuid"
 
+type Place = {
+  id: string,
+  title: string,
+  completed: boolean,
+  createdAt: Date,
+}
+
 const list = document.querySelector<HTMLUListElement>("#list")
 const form = document.getElementById("new-place-form") as HTMLFormElement | null
 const input = document.querySelector<HTMLInputElement>("#new-place-title")
@@ -19,9 +26,4 @@ form?.addEventListener("submit", e => {
   addListItem(newPlace)
 })
 
-function addListItem(place: {
-  id: string,
-  title: string,
-  completed: boolean,
-  createdAt: Date,
-}) {}
+function addListItem(place: Place) {}
