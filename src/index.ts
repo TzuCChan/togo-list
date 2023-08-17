@@ -34,4 +34,5 @@ function addListItem(place: Place) {
   label.append(checkbox, place.title)
   item.append(label)
   list?.append(item)
+  return true
 }
