@@ -3,7 +3,7 @@ import { v4 as uuidV4 } from "uuid"
 type Place = {
   id: string,
   title: string,
-  completed: boolean,
+  visited: boolean,
   createdAt: Date,
 }
 
@@ -21,7 +21,7 @@ form?.addEventListener("submit", e => {
   const newPlace: Place = {
     id: uuidV4(),
     title: input.value,
-    completed: false,
+    visited: false,
     createdAt: new Date()
   }
   places.push(newPlace)
@@ -36,11 +36,11 @@ function addListItem(place: Place) {
   const label = document.createElement("label")
   const checkbox = document.createElement("input")
   checkbox.addEventListener("change", () => {
-    place.completed = checkbox.checked
+    place.visited = checkbox.checked
     savePlaces()
   })
   checkbox.type = "checkbox"
-  checkbox.checked = place.completed
+  checkbox.checked = place.visited
   label.append(checkbox, place.title)
   item.append(label)
   list?.append(item)
